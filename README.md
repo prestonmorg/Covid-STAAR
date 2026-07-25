@@ -42,45 +42,63 @@ Note that there is no need to upload the data used in this project to your activ
 ## Data Collection and Cleaning
 
 ### Data Source
-The source for this data came from the [Texas Assessment Research Portal](https://txresearchportal.com/selections?tab=state). Specific steps for collecting this data are outline below.
+The source for this data came from the [Texas Assessment Research Portal](https://txresearchportal.com/selections?tab=state) using the **STAAR EOC Group Summary** reports for **Algebra I**.
 
-1. Select the **STAAR EOC** program.
-2. Select the **Group Summary: Performance Levels and Reporting Categories** report.
-3. Select each administration in the form of **Spring ____**.
-4. Select the **Algebra I** subject.
-
-There are a few things to note. One is that the administration that was chosen (i.e. choosing the Spring administration for each year) was done so to account for when most students would take the EOC (end of curriculum) STAAR test. There are students that can pass through necessary Algebra I credit oustide of the normal school timeline, like in Summer, Fall, or Winter. Another thing to note is that this same data is accessible for other subjects as well. In the 'STAAR_Cumulative_Scores.csv' file, you'll notice that Algebra I is not the only subject listed. This is something I will talk about later on in the page about future projects that could stem from this analysis.
+There are a few things to note:
+* Only the **Spring Administration** for each year was chosen to account for when most students would take the EOC (end of curriculum) STAAR test. Excluding results from the Summer, Fall, or Winter exams ensures there are no accidental same-year retakes.
+* This same data is accessible for **other subjects** as well. In the 'STAAR_Cumulative_Scores.csv' file, you'll notice that Algebra I is not the only subject listed. This keeps the door open for future projects that will be discussed below!
 
 ### Data Cleaning
-There were only two main things that needed to be cleaned/processed from the 'STAAR_Cumulative_Scores.csv' file that was obtained using the steps mentioned above. All of the cleaning steps mentioned were done manually.
+There were a few things that needed to be cleaned/processed from the 'STAAR_Cumulative_Scores.csv' file that was obtained using the steps mentioned above.
+1. **Filtering the Appropriate Tests:**
 
-The first (and simplest) cleaning piece was only taking the Algebra I scores from the file. Due to how to the file is presented (alphabetically), Algebra I is the first test listed and was the easiest to find. Another important thing to note is that I did not include the scores from the STAAR A and STAAR L tests. The main reason for this is that there were only 2 Spring administrations in which the STAAR A test had scoring data on, and only 5 Spring administrations in which the STAAR L test had scoring data. Due to the inconsistency of the provided data, I decided it was best to note include these metrics in the final cleaned dataset.
+Like mentioned above, multiple subjects were included in the collective data file before cleaning. I decided to just look at Algebra I for this project, which meant I only included the Algebra I tests. Furthermore, I excluded the STAAR A (Accommodated) and the STAAR L (Linguistic) tests since the available scores for this test were limited and inconsistent.
 
-The second (and more involved) cleaning piece was relating the scoring metrics from 2012-2016 and 2017-2025 (excluding the year 2020 since there were no STAAR tests that year). 
+2. **Combining Scoring Metrics:**
 
-The scoring metrics for the timeline of 2012-2016 were as follows:
-1. Satisfactory
-2. Advanced
-3. Unsatisfactory
+The state changed the performance metrics and how they categorized student scores. Because of this, I had to bridge the scoring metrics of the two timelines, 2012-2016 and and 2017-2025 (excluding the year 2020 since there were no STAAR tests that year). To bridge the two timelines into one, I ended up making 3 scoring metrics:
 
-The scoring metrics for the timeline of 2017-2025 were as follows:
-1. Did Not Meet
-2. Approaches
-3. Meets
-4. Masters
+  | Unified Metric | 2012–2016 Tiers | 2017–2025 Tiers | What it represents |
+  | :--- | :--- | :--- | :--- |
+  | **Unsatisfactory** | Unsatisfactory | Did Not Meet | Students who did not pass |
+  | **Approaches to Meets** | Satisfactory | Approaches & Meets | Students who passed |
+  | **Advanced** | Advanced | Masters | Students who excelled |
 
-To bridge the two timelines into one, I ended up making 3 scoring metrics:
-1. Unsatisfactory - This included the **Did Not Meet** and the **Unsatisfactory** groups from the different timelines.
-2. Approaches to Meets - This included the **Satisfactory**, **Approaches**, and **Meets** groups from the different timelines.
-3. Advanced - This included the **Satisfactory** and the **Masters** groups from the different timelines.
-
-I did it this way to make sure there was an easy distinction between passing and failing, while also accounting for an 'Advanced' section to list the number of students who excelled on the test.
+3. **Converting Cumulative Counts to Exact Counts:**
 
 One final thing to note is that the STAAR data given from the website has a strange format of only providing counts/percentages for 'X and Above' for every group that isn't the top scoring group from that timeline. However, it was quite easy to work backwards and grab the specific numbers from the strangely formatted data.
 
 ## Results and Findings
 
-TBA
+To see exactly how the COVID-19 pandemic affected the passing rates of the Algebra I STAAR test, I used an **Interruped Time Series (ITS)** model to look at 3 main things:
+1. **Pre-Pandemic Trend** (How were scores moving prior to 2020?)
+2. **Immediate Affect from Pandemic** (How much were passing rates affected in 2021?)
+3. **Post-Pandemic Recovery** (Are there improvements in passing rates? If so, at what rate?)
+
+### 1. Visualizing the Impact
+
+The plot below shows the actual passing rates alongside a counterfactual projection. This projection measures where the student scores would have been had the COVID-19 interruption not happened.
+
+![ITS Model Visualization](docs/images/ITS_Graph.png)
+
+> While passing rates are turning upwards since the occurrence of the COVID-19 pandemic, student performance is still trailing behind where our pre-2020 trends project them to be.
+
+### 2. Regression Model Summary
+
+I fitted a Binomial Generalized Linear Model (GLM) using a logit link function to model the proportion of students passing over time:
+
+$$\text{logit}(P(Y_t)) = \beta_0 + \beta_1 T + \beta_2 D + \beta_3 P$$
+
+| Parameter | Model Variable | Value $\beta$ | What it Measures |
+| :---: | :---: | :---: | :--- |
+| **Pre-COVID Trend $\beta_1$** | $T$ (Running year count) | `+0.0303` | Growth rate prior to 2020 ($p < 0.001$). |
+| **Immediate Shock $\beta_2$** | $D$ ($0 =$ Pre-COVID, <br>$1 =$ Post-COVID) | `-0.7061` | Log-Odds drop of passing rate immediately following COVID ($p < 0.001$). |
+| **Post-COVID Trend $\beta_3$** | $P$ (Years since COVID) | `+0.0441` | Growth rate following 2020 ($p < 0.001$). |
+
+### 3. Key Conclusions
+
+* **A Gap Remains Despite Post-COVID Recovery:** Our post-COVID trend, $\beta_3$, shows that there is an improvement in the passing rates of students since the pandemic, but the size of our initial deficit, $\beta_2$, means our scores have yet to reach our pre-COVID predictions.
+* **Relevance:** Since Algebra I is such an intrinsic introduction to higher level mathematics for high schoolers, tracking the recovery slope post-COVID is important for locating where academic support is still needed.
 
 ## Future Projects
 
