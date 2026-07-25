@@ -84,11 +84,11 @@ TBA
 
 ## Future Projects
 
-
+TBA
 
 ## Acknowledgements and References
 
+TBA
 
-
-## Licenses
+## License
 This project is open-source and available under the [MIT License](LICENSE).
