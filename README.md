@@ -1,3 +1,9 @@
+<div align='center'>
+
+  ![Library](docs/images/susan-q-yin-small-unsplash.jpg)
+
+</div>
+
 # COVID-19's Impact on the Algebra I STAAR Passing Rates
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/prestonmorg/Covid-STAAR/blob/main/notebooks/Covid_STAAR_Notebook.ipynb)
@@ -95,6 +101,11 @@ $$\text{logit}(P(Y_t)) = \beta_0 + \beta_1 T + \beta_2 D + \beta_3 P$$
 | **Immediate Shock $\beta_2$** | $D$ ($0 =$ Pre-COVID, <br>$1 =$ Post-COVID) | `-0.7061` | Log-Odds drop of passing rate immediately following COVID ($p < 0.001$). |
 | **Post-COVID Trend $\beta_3$** | $P$ (Years since COVID) | `+0.0441` | Growth rate following 2020 ($p < 0.001$). |
 
+> **Key Takeaways:**
+> Since log-odds aren't as intuitive to understand, I'll explain the odds ratios (i.e. $e^{\beta}$).
+> * **Immediate Pandemic Drop:** Exponentiating $\beta_2$ $(e^{\beta_2} \approx 0.4935)$ tells us that the odds of a student passing in 2021 fell by around 51% compared to the pre-pandemic scores.
+> * **Post-COVID Recovery:** Exponentiating $\beta_1 + \beta_3$ $(e^{(\beta_1 + \beta_3)} \approx 1.0772)$ tells us that since the pandemic occurred, the passing odds have been growing by roughly 7.7% each year. Note that $\beta_1$ is our pre-COVID rate, and $\beta_3$ is the rate at which our pre-COVID rate is increasing. That's why we need to include both to explain our overal post-COVID recovery.
+
 ### 3. Key Conclusions
 
 * **A Gap Remains Despite Post-COVID Recovery:** Our post-COVID trend, $\beta_3$, shows that there is an improvement in the passing rates of students since the pandemic, but the size of our initial deficit, $\beta_2$, means our scores have yet to reach our pre-COVID predictions.
@@ -102,11 +113,22 @@ $$\text{logit}(P(Y_t)) = \beta_0 + \beta_1 T + \beta_2 D + \beta_3 P$$
 
 ## Future Projects
 
-TBA
+There are a couple of different ways in which we can expand upon this project.
+
+* **Updating the Algebra I Scores:**
+
+Since the STAAR test is an ongoing measure of curriculum proficiency in the state of Texas, scores will continue to be released each year. We could include the new Spring Administration for each year and see how the post-COVID recovery is going once we consider the new scores. I do plan on updating this project each year that new scores are released, but STAAR is also being updated for the 2026-2027 academic year so I need to dive deeper into that beforehand.
+* **Running Analyses on Different Subjects:**
+
+Another idea we could expand upon in relation to this project is doing this analysis for each subject tested by STAAR, and even doing an entire collective project over how STAAR scores have been affected by all tested subjects.
+
 
 ## Acknowledgements and References
 
-TBA
+I'd like to thank Giancarlo Villatoro for their support and guidance over planning and editing this project.
+
+Header Photo by [Susan Q Yin](https://unsplash.com/@syinq?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/books-on-brown-wooden-shelf-2JIvboGLeho?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText")
+      
 
 ## License
 This project is open-source and available under the [MIT License](LICENSE).
