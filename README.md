@@ -17,7 +17,7 @@ There are two ways to access the analysis provided in this repository. One way i
 ### Method 1 - Running Locally
 1. **Clone the Repository**
 ```bash
-git clone [https://github.com/prestonmorg/Covid-STAAR.git](https://github.com/prestonmorg/Covid-STAAR.git)
+git clone https://github.com/prestonmorg/Covid-STAAR.git
 cd Covid-STAAR
 ```
 2. **Set Up a Virtual Environment (Recommended)**
