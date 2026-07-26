@@ -41,7 +41,7 @@ jupyter notebook notebooks/Covid_STAAR_Notebook.ipynb
 ### Method 2 - Run in Google Colab
 If you prefer to run the notebook directly in Google Colab as opposed to setting anything up locally:
 1. Click the ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg) badge at the top of this page.
-2. Select **Runtime > Run all** in the top menu.
+2. Select **Run all** in the top menu.
 
 Note that there is no need to upload the data used in this project to your active Colab runtime session files since the data is read directly from this GitHub repository.
 
