@@ -103,7 +103,7 @@ $$\text{logit}(P(Y_t)) = \beta_0 + \beta_1 T + \beta_2 D + \beta_3 P$$
 
 > **Key Takeaways:**
 > Since log-odds aren't as intuitive to understand, I'll explain the odds ratios (i.e. $e^{\beta}$).
-> * **Immediate Pandemic Drop:** Exponentiating $\beta_2$ $(e^{\beta_2} \approx 0.4935)$ tells us that the odds of a student passing in 2021 fell by around 53% compared to the pre-pandemic scores.
+> * **Immediate Pandemic Drop:** Exponentiating $\beta_2$ $(e^{\beta_2} \approx 0.4696)$ tells us that the odds of a student passing in 2021 fell by around 53% compared to the pre-pandemic scores.
 > * **Post-COVID Recovery:** Exponentiating $\beta_1 + \beta_3$ $(e^{(\beta_1 + \beta_3)} \approx 1.1004)$ tells us that since the pandemic occurred, the passing odds have been growing by roughly 10.04% each year. Note that $\beta_1$ is our pre-COVID rate, and $\beta_3$ is the rate at which our pre-COVID rate is increasing. That's why we need to include both to explain our overal post-COVID recovery.
 
 ### 3. Key Conclusions
