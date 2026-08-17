@@ -6,7 +6,7 @@
 
 # COVID-19's Impact on the Algebra I STAAR Passing Rates
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/prestonmorg/Covid-STAAR/blob/main/notebooks/Covid_STAAR_Notebook.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/prestonmorg/Covid-STAAR/blob/main/notebooks/Covid_STAAR_Algebra_Notebook.ipynb)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 This analysis investigates the COVID-19 pandemic's impact on the passing rates of the Algebra I STAAR (State of Texas Assessments of Academic Readiness) test both in the years prior to and following the pandemic. 
@@ -36,7 +36,7 @@ pip install -r requirements.txt
 ```
 4. **Launch the Notebook**
 ```bash
-jupyter notebook notebooks/Covid_STAAR_Notebook.ipynb
+jupyter notebook notebooks/Covid_STAAR_Algebra_Notebook.ipynb
 ```
 ### Method 2 - Run in Google Colab
 If you prefer to run the notebook directly in Google Colab as opposed to setting anything up locally:
@@ -52,7 +52,7 @@ The source for this data came from the [Texas Assessment Research Portal](https:
 
 There are a few things to note:
 * Only the **Spring Administration** for each year was chosen to account for when most students would take the EOC (end of curriculum) STAAR test. Excluding results from the Summer, Fall, or Winter exams ensures there are no accidental same-year retakes.
-* This same data is accessible for **other subjects** as well. In the 'STAAR_Cumulative_Scores.csv' file, you'll notice that Algebra I is not the only subject listed. This keeps the door open for future projects that will be discussed below!
+* This same data is accessible for **other subjects** as well. In the 'STAAR_Cumulative_Scores.csv' file, you'll notice that Algebra I is not the only subject listed. This keeps the door open for future projects that will be discussed below! On that same note, I decided to omit tracking the Reading I, Reading II, Writing I, and Writing II scores since they were only tracked from 2012-2013. Thus, it's impossible to run a pre-COVID and post-COVID analysis for those 4 subjects.
 
 ### Data Cleaning
 There were a few things that needed to be cleaned/processed from the 'STAAR_Cumulative_Scores.csv' file that was obtained using the steps mentioned above.
@@ -85,7 +85,7 @@ To see exactly how the COVID-19 pandemic affected the passing rates of the Algeb
 
 The plot below shows the actual passing rates alongside a counterfactual projection. This projection measures where the student scores would have been had the COVID-19 interruption not happened.
 
-![ITS Model Visualization](docs/images/ITS_Graph.png)
+![ITS Model Visualization](docs/images/ITS_Graph_2026.png)
 
 > While passing rates are turning upwards since the occurrence of the COVID-19 pandemic, student performance is still trailing behind where our pre-2020 trends project them to be.
 
@@ -98,17 +98,17 @@ $$\text{logit}(P(Y_t)) = \beta_0 + \beta_1 T + \beta_2 D + \beta_3 P$$
 | Parameter | Model Variable | Value $\beta$ | What it Measures |
 | :---: | :---: | :---: | :--- |
 | **Pre-COVID Trend $\beta_1$** | $T$ (Running year count) | `+0.0303` | Growth rate prior to 2020 ($p < 0.001$). |
-| **Immediate Shock $\beta_2$** | $D$ ($0 =$ Pre-COVID, <br>$1 =$ Post-COVID) | `-0.7061` | Log-Odds drop of passing rate immediately following COVID ($p < 0.001$). |
-| **Post-COVID Trend $\beta_3$** | $P$ (Years since COVID) | `+0.0441` | Growth rate following 2020 ($p < 0.001$). |
+| **Immediate Shock $\beta_2$** | $D$ ($0 =$ Pre-COVID, <br>$1 =$ Post-COVID) | `-0.7560` | Log-Odds drop of passing rate immediately following COVID ($p < 0.001$). |
+| **Post-COVID Trend $\beta_3$** | $P$ (Years since COVID) | `+0.0654` | Growth rate following 2020 ($p < 0.001$). |
 
 > **Key Takeaways:**
 > Since log-odds aren't as intuitive to understand, I'll explain the odds ratios (i.e. $e^{\beta}$).
-> * **Immediate Pandemic Drop:** Exponentiating $\beta_2$ $(e^{\beta_2} \approx 0.4935)$ tells us that the odds of a student passing in 2021 fell by around 51% compared to the pre-pandemic scores.
-> * **Post-COVID Recovery:** Exponentiating $\beta_1 + \beta_3$ $(e^{(\beta_1 + \beta_3)} \approx 1.0772)$ tells us that since the pandemic occurred, the passing odds have been growing by roughly 7.7% each year. Note that $\beta_1$ is our pre-COVID rate, and $\beta_3$ is the rate at which our pre-COVID rate is increasing. That's why we need to include both to explain our overal post-COVID recovery.
+> * **Immediate Pandemic Drop:** Exponentiating $\beta_2$ $(e^{\beta_2} \approx 0.4935)$ tells us that the odds of a student passing in 2021 fell by around 53% compared to the pre-pandemic scores.
+> * **Post-COVID Recovery:** Exponentiating $\beta_1 + \beta_3$ $(e^{(\beta_1 + \beta_3)} \approx 1.1004)$ tells us that since the pandemic occurred, the passing odds have been growing by roughly 10.04% each year. Note that $\beta_1$ is our pre-COVID rate, and $\beta_3$ is the rate at which our pre-COVID rate is increasing. That's why we need to include both to explain our overal post-COVID recovery.
 
 ### 3. Key Conclusions
 
-* **A Gap Remains Despite Post-COVID Recovery:** Our post-COVID trend, $\beta_3$, shows that there is an improvement in the passing rates of students since the pandemic, but the size of our initial deficit, $\beta_2$, means our scores have yet to reach our pre-COVID predictions.
+* **A Gap Remains Despite Post-COVID Recovery:** Our post-COVID trend, $\beta_3$, shows that there is an improvement in the passing rates of students since the pandemic, but the size of our initial deficit, $\beta_2$, means our scores have yet to reach our pre-COVID predictions. It's important to note that while our recent scores have not yet met up with our pre-COVID projections, they are starting to near our pre-COVID scores.
 * **Relevance:** Since Algebra I is such an intrinsic introduction to higher level mathematics for high schoolers, tracking the recovery slope post-COVID is important for locating where academic support is still needed.
 
 ## Future Projects
