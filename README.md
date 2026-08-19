@@ -4,12 +4,12 @@
 
 </div>
 
-# COVID-19's Impact on the Algebra I STAAR Passing Rates
+# COVID-19's Impact on STAAR Passing Rates
 
 [![Open Algebra Notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/prestonmorg/Covid-STAAR/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-This analysis investigates the COVID-19 pandemic's impact on the passing rates of the Algebra I STAAR (State of Texas Assessments of Academic Readiness) test both in the years prior to and following the pandemic. 
+This analysis investigates the COVID-19 pandemic's impact on the passing rates of the STAAR (State of Texas Assessments of Academic Readiness) test both in the years prior to and following the pandemic. 
 
 ## Installation and Setup
 There are two ways to access the analysis provided in this repository. One way is running this locally with Python, and the other way is running this directly through Google Colab. The processes for accessing both methods are outlined below.
@@ -38,10 +38,13 @@ pip install -r requirements.txt
 ```bash
 jupyter notebook notebooks/Covid_STAAR_Algebra_Notebook.ipynb
 ```
+Note that you can replace 'Algebra' with any subject of your choosing that is available!
+
 ### Method 2 - Run in Google Colab
-If you prefer to run the notebook directly in Google Colab as opposed to setting anything up locally:
+If you prefer to run a certain notebook directly in Google Colab as opposed to setting anything up locally:
 1. Click the ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg) badge at the top of this page.
-2. Select **Run all** in the top menu.
+2. Choose your preferred notebook to run from the list of options.
+3. Select **Run all** in the top menu.
 
 Note that there is no need to upload the data used in this project to your active Colab runtime session files since the data is read directly from this GitHub repository.
 
@@ -52,13 +55,13 @@ The source for this data came from the [Texas Assessment Research Portal](https:
 
 There are a few things to note:
 * Only the **Spring Administration** for each year was chosen to account for when most students would take the EOC (end of curriculum) STAAR test. Excluding results from the Summer, Fall, or Winter exams ensures there are no accidental same-year retakes.
-* This same data is accessible for **other subjects** as well. In the 'STAAR_Cumulative_Scores.csv' file, you'll notice that Algebra I is not the only subject listed. This keeps the door open for future projects that will be discussed below! On that same note, I decided to omit tracking the Reading I, Reading II, Writing I, and Writing II scores since they were only tracked from 2012-2013. Thus, it's impossible to run a pre-COVID and post-COVID analysis for those 4 subjects.
+* I decided to omit tracking the Reading I, Reading II, Writing I, and Writing II scores since they were only tracked from 2012-2013.
 
 ### Data Cleaning
 There were a few things that needed to be cleaned/processed from the 'STAAR_Cumulative_Scores.csv' file that was obtained using the steps mentioned above.
 1. **Filtering the Appropriate Tests:**
 
-Like mentioned above, multiple subjects were included in the collective data file before cleaning. I decided to just look at Algebra I for this project, which meant I only included the Algebra I tests. Furthermore, I excluded the STAAR A (Accommodated) and the STAAR L (Linguistic) tests since the available scores for this test were limited and inconsistent.
+I excluded the STAAR A (Accommodated) and the STAAR L (Linguistic) tests since the available scores for this test were limited and inconsistent. Furthermore, like mentioned above, I did not include the Reading I, Reading II, Writing I, and Writing II scores since they were only tracked from 2012-2013. It would not be possible to see how COVID affected the passing rates for these tests if they were only tracked a few years prior to COVID.
 
 2. **Combining Scoring Metrics:**
 
