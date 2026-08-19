@@ -6,11 +6,7 @@
 
 # COVID-19's Impact on the Algebra I STAAR Passing Rates
 
-[![Open Algebra Notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/prestonmorg/Covid-STAAR/blob/main/notebooks/Covid_STAAR_Algebra_Notebook.ipynb)
-[![Open Biology Notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/prestonmorg/Covid-STAAR/blob/main/notebooks/Covid_STAAR_Biology_Notebook.ipynb)
-[![Open English I Notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/prestonmorg/Covid-STAAR/blob/main/notebooks/Covid_STAAR_English_I_Notebook.ipynb)
-[![Open English II Notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/prestonmorg/Covid-STAAR/blob/main/notebooks/Covid_STAAR_English_II_Notebook.ipynb)
-[![Open US History Notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/prestonmorg/Covid-STAAR/blob/main/notebooks/Covid_STAAR_US_History_Notebook.ipynb)
+[![Open Algebra Notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/prestonmorg/Covid-STAAR/blob/main/notebooks)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 This analysis investigates the COVID-19 pandemic's impact on the passing rates of the Algebra I STAAR (State of Texas Assessments of Academic Readiness) test both in the years prior to and following the pandemic. 
