@@ -108,11 +108,21 @@ I fitted a Binomial Generalized Linear Model (GLM) using a logit link function t
 
 $$\text{logit}(P(Y_t)) = \beta_0 + \beta_1 T + \beta_2 D + \beta_3 P$$
 
+The table below outlines what the variables and parameters represent.
 | Parameter | Model Variable | What it Measures |
 | :---: | :---: | :---: |
 | **Pre-COVID Trend $\beta_1$** | $T$ (Running year count) | Growth rate prior to 2020 ($p < 0.001$). |
 | **Immediate Shock $\beta_2$** | $D$ ($0 =$ Pre-COVID, <br>$1 =$ Post-COVID) | Log-Odds drop of passing rate immediately following COVID ($p < 0.001$). |
 | **Post-COVID Trend $\beta_3$** | $P$ (Years since COVID) | Growth rate following 2020 ($p < 0.001$). |
+
+The next table outlines the parameter values for each STAAR subject.
+| Subject | \beta_1 | \beta_2 | \beta_3 |
+| :---: | :---: | :---: | :---: |
+| Algebra I | '0.0303' | '-0.7560' | '0.0654' |
+| Biology | '-0.0082' | '-0.7935' | '0.2564' |
+| English I | '-0.0070' | '0.0970' | '0.0545' |
+| English II | '0.0024' | '0.2430' | '0.0132' |
+| US History | '0.1325' | '-0.9141' | '0.0392' |
 
 > **Key Takeaways:**
 > Since log-odds aren't as intuitive to understand, I'll explain the odds ratios (i.e. $e^{\beta}$).
