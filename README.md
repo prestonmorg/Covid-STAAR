@@ -1,7 +1,5 @@
 <div align='center'>
-
   ![Library](docs/images/susan-q-yin-small-unsplash.jpg)
-
 </div>
 
 # COVID-19's Impact on STAAR Passing Rates
@@ -79,7 +77,7 @@ One final thing to note is that the STAAR data given from the website has a stra
 
 ## Results and Findings
 
-To see exactly how the COVID-19 pandemic affected the passing rates of the Algebra I STAAR test, I used an **Interruped Time Series (ITS)** model to look at 3 main things:
+To see exactly how the COVID-19 pandemic affected the passing rates of the Algebra I STAAR test, I used an **Interrupted Time Series (ITS)** model to look at 3 main things:
 1. **Pre-Pandemic Trend** (How were scores moving prior to 2020?)
 2. **Immediate Affect from Pandemic** (How much were passing rates affected in 2021?)
 3. **Post-Pandemic Recovery** (Are there improvements in passing rates? If so, at what rate?)
@@ -88,7 +86,17 @@ To see exactly how the COVID-19 pandemic affected the passing rates of the Algeb
 
 The plot below shows the actual passing rates alongside a counterfactual projection. This projection measures where the student scores would have been had the COVID-19 interruption not happened.
 
-![ITS Model Visualization](docs/images/Algebra_ITS_Graph_2026.png)
+<p float='left'>
+  <img src='https://github.com/prestonmorg/Covid-STAAR/blob/main/docs/images/Algebra_ITS_Graph_2026.png' width='49%' />
+  <img src='https://github.com/prestonmorg/Covid-STAAR/blob/main/docs/images/Biology_ITS_Graph_2026.png' width='49%' />
+</p>
+<p float='left'>
+  <img src='https://github.com/prestonmorg/Covid-STAAR/blob/main/docs/images/English_I_ITS_Graph_2026.png' width='49%' />
+  <img src='https://github.com/prestonmorg/Covid-STAAR/blob/main/docs/images/English_II_ITS_Graph_2026.png' width='49%' />
+</p>
+<div align='center>
+  <img src='https://github.com/prestonmorg/Covid-STAAR/blob/main/docs/images/English_I_ITS_Graph_2026.png' width='49%' />
+</div>
 
 > While passing rates are turning upwards since the occurrence of the COVID-19 pandemic, student performance is still trailing behind where our pre-2020 trends project them to be.
 
