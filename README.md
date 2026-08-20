@@ -66,6 +66,7 @@ I excluded the STAAR A (Accommodated) and the STAAR L (Linguistic) tests since t
 2. **Combining Scoring Metrics:**
 
 The state changed the performance metrics and how they categorized student scores. Because of this, I had to bridge the scoring metrics of the two timelines, 2012-2016 and and 2017-2025 (excluding the year 2020 since there were no STAAR tests that year). To bridge the two timelines into one, I ended up making 3 scoring metrics:
+<div align='center'>
 
   | Unified Metric | 2012–2016 Tiers | 2017–2025 Tiers | What it represents |
   | :--- | :--- | :--- | :--- |
@@ -73,6 +74,7 @@ The state changed the performance metrics and how they categorized student score
   | **Approaches to Meets** | Satisfactory | Approaches & Meets | Students who passed |
   | **Advanced** | Advanced | Masters | Students who excelled |
 
+</div>
 3. **Converting Cumulative Counts to Exact Counts:**
 
 One final thing to note is that the STAAR data given from the website has a strange format of only providing counts/percentages for 'X and Above' for every group that isn't the top scoring group from that timeline. However, it was quite easy to work backwards and grab the specific numbers from the strangely formatted data.
@@ -109,12 +111,15 @@ I fitted a Binomial Generalized Linear Model (GLM) using a logit link function t
 $$\text{logit}(P(Y_t)) = \beta_0 + \beta_1 T + \beta_2 D + \beta_3 P$$
 
 The table below outlines what the variables and parameters represent.
-| Parameter | Model Variable | What it Measures |
-| :---: | :---: | :---: |
-| **Pre-COVID Trend $\beta_1$** | $T$ (Running year count) | Growth rate prior to 2020 ($p < 0.001$). |
-| **Immediate Shock $\beta_2$** | $D$ ($0 =$ Pre-COVID, <br>$1 =$ Post-COVID) | Log-Odds drop of passing rate immediately following COVID ($p < 0.001$). |
-| **Post-COVID Trend $\beta_3$** | $P$ (Years since COVID) | Growth rate following 2020 ($p < 0.001$). |
+<div align='center'>
+  
+  | Parameter | Model Variable | What it Measures |
+  | :---: | :---: | :---: |
+  | **Pre-COVID Trend $\beta_1$** | $T$ (Running year count) | Growth rate prior to 2020 ($p < 0.001$). |
+  | **Immediate Shock $\beta_2$** | $D$ ($0 =$ Pre-COVID, <br>$1 =$ Post-COVID) | Log-Odds drop of passing rate immediately following COVID ($p < 0.001$). |
+  | **Post-COVID Trend $\beta_3$** | $P$ (Years since COVID) | Growth rate following 2020 ($p < 0.001$). |
 
+</div>
 The next table outlines the parameter values for each STAAR subject.
 <div align='center'>
   
