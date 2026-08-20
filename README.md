@@ -1,5 +1,7 @@
 <div align='center'>
+  
   ![Library](docs/images/susan-q-yin-small-unsplash.jpg)
+
 </div>
 
 # COVID-19's Impact on STAAR Passing Rates
