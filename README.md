@@ -116,13 +116,17 @@ The table below outlines what the variables and parameters represent.
 | **Post-COVID Trend $\beta_3$** | $P$ (Years since COVID) | Growth rate following 2020 ($p < 0.001$). |
 
 The next table outlines the parameter values for each STAAR subject.
-| Subject | \beta_1 | \beta_2 | \beta_3 |
-| :---: | :---: | :---: | :---: |
-| Algebra I | '0.0303' | '-0.7560' | '0.0654' |
-| Biology | '-0.0082' | '-0.7935' | '0.2564' |
-| English I | '-0.0070' | '0.0970' | '0.0545' |
-| English II | '0.0024' | '0.2430' | '0.0132' |
-| US History | '0.1325' | '-0.9141' | '0.0392' |
+<div align='center'>
+  
+  | Subject | $\beta_1$ | $\beta_2$ | $\beta_3$ |
+  | :---: | :---: | :---: | :---: |
+  | Algebra I | $0.0303$ | $-0.7560$ | $0.0654$ |
+  | Biology | $-0.0082$ | $-0.7935$ | $0.2564$ |
+  | English I | $-0.0070$ | $0.0970$ | $0.0545$ |
+  | English II | $0.0024$ | $0.2430$ | $0.0132$ |
+  | US History | $0.1325$ | $-0.9141$ | $0.0392$ |
+
+</div>
 
 > **Key Takeaways:**
 > Since log-odds aren't as intuitive to understand, I'll explain the odds ratios (i.e. $e^{\beta}$).
