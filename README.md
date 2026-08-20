@@ -145,11 +145,11 @@ The table below shows the 2 key takeaways described above.
   
   | Subject | Immediate Pandemic Change | Post-COVID Recovery |
   | :---: | :---: | :---: |
-  | Algebra I | $0.4696$ ($53.04%$ Decrease) | $1.1004$ ($10.04%$ Increase) |
-  | Biology | $0.4523$ ($54.77%$ Decrease) | $1.2817$ ($28.17%$ Increase) |
-  | English I | $1.1019$ ($10.19%$ Increase) | $1.0486$ ($4.86%$ Increase) |
-  | English II | $1.2751$ ($27.51%$ Increase) | $1.0157$ ($1.57%$ Increase) |
-  | US History | $0.4009$ ($59.91%$ Decrease) | $1.1873$ ($18.73%$ Increase) |
+  | Algebra I | $0.4696$ ($53.04/%$ Decrease) | $1.1004$ ($10.04/%$ Increase) |
+  | Biology | $0.4523$ ($54.77/%$ Decrease) | $1.2817$ ($28.17/%$ Increase) |
+  | English I | $1.1019$ ($10.19/%$ Increase) | $1.0486$ ($4.86/%$ Increase) |
+  | English II | $1.2751$ ($27.51/%$ Increase) | $1.0157$ ($1.57/%$ Increase) |
+  | US History | $0.4009$ ($59.91/%$ Decrease) | $1.1873$ ($18.73/%$ Increase) |
 
 </div>
 
