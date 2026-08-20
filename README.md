@@ -135,10 +135,23 @@ The next table outlines the parameter values for each STAAR subject.
 
 </div>
 
-> **Key Takeaways:**
-> Since log-odds aren't as intuitive to understand, I'll explain the odds ratios (i.e. $e^{\beta}$).
-> * **Immediate Pandemic Drop:** Exponentiating $\beta_2$ $(e^{\beta_2} \approx 0.4696)$ tells us that the odds of a student passing in 2021 fell by around 53% compared to the pre-pandemic scores.
-> * **Post-COVID Recovery:** Exponentiating $\beta_1 + \beta_3$ $(e^{(\beta_1 + \beta_3)} \approx 1.1004)$ tells us that since the pandemic occurred, the passing odds have been growing by roughly 10.04% each year. Note that $\beta_1$ is our pre-COVID rate, and $\beta_3$ is the rate at which our pre-COVID rate is increasing. That's why we need to include both to explain our overal post-COVID recovery.
+**There are 2 Key Takeaways:**
+Since log-odds aren't as intuitive to understand, we'll look at the odds ratios (i.e. $e^{\beta}$).
+* **Immediate Pandemic Change:** Exponentiating $\beta_2$ $(e^{\beta_2})$ tells us that the odds of a student passing in 2021 fell or increased by directly following the pandemic.
+* **Post-COVID Recovery:** Exponentiating $\beta_1 + \beta_3$ $(e^{(\beta_1 + \beta_3)})$ tells us how the passing odds since have changed year by year since COVID. Note that $\beta_1$ is our pre-COVID rate, and $\beta_3$ is the rate at which our pre-COVID rate is changing. That's why we need to include both to explain our overall post-COVID recovery.
+
+The table below shows the 2 key takeaways described above.
+<div align='center'>
+  
+  | Subject | Immediate Pandemic Change | Post-COVID Recovery |
+  | :---: | :---: | :---: |
+  | Algebra I | $0.4696$ ($53.04%$ Decrease) | $1.1004$ ($10.04%$ Increase) |
+  | Biology | $0.4523$ ($54.77%$ Decrease) | $1.2817$ ($28.17%$ Increase) |
+  | English I | $1.1019$ ($10.19%$ Increase) | $1.0486$ ($4.86%$ Increase) |
+  | English II | $1.2751$ ($27.51%$ Increase) | $1.0157$ ($1.57%$ Increase) |
+  | US History | $0.4009$ ($59.91%$ Decrease) | $1.1873$ ($18.73%$ Increase) |
+
+</div>
 
 ### 3. Key Conclusions
 
