@@ -109,7 +109,7 @@ I fitted a Binomial Generalized Linear Model (GLM) using a logit link function t
 $$\text{logit}(P(Y_t)) = \beta_0 + \beta_1 T + \beta_2 D + \beta_3 P$$
 
 | Parameter | Model Variable | What it Measures |
-| :---: | :---: | :---: | :--- |
+| :---: | :---: | :---: |
 | **Pre-COVID Trend $\beta_1$** | $T$ (Running year count) | Growth rate prior to 2020 ($p < 0.001$). |
 | **Immediate Shock $\beta_2$** | $D$ ($0 =$ Pre-COVID, <br>$1 =$ Post-COVID) | Log-Odds drop of passing rate immediately following COVID ($p < 0.001$). |
 | **Post-COVID Trend $\beta_3$** | $P$ (Years since COVID) | Growth rate following 2020 ($p < 0.001$). |
