@@ -75,6 +75,7 @@ The state changed the performance metrics and how they categorized student score
   | **Advanced** | Advanced | Masters | Students who excelled |
 
 </div>
+
 3. **Converting Cumulative Counts to Exact Counts:**
 
 One final thing to note is that the STAAR data given from the website has a strange format of only providing counts/percentages for 'X and Above' for every group that isn't the top scoring group from that timeline. However, it was quite easy to work backwards and grab the specific numbers from the strangely formatted data.
@@ -120,6 +121,7 @@ The table below outlines what the variables and parameters represent.
   | **Post-COVID Trend $\beta_3$** | $P$ (Years since COVID) | Growth rate following 2020 ($p < 0.001$). |
 
 </div>
+
 The next table outlines the parameter values for each STAAR subject.
 <div align='center'>
   
