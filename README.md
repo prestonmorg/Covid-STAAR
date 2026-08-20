@@ -87,15 +87,15 @@ To see exactly how the COVID-19 pandemic affected the passing rates of the Algeb
 The plot below shows the actual passing rates alongside a counterfactual projection. This projection measures where the student scores would have been had the COVID-19 interruption not happened.
 
 <p float='left'>
-  <img src='https://github.com/prestonmorg/Covid-STAAR/blob/main/docs/images/Algebra_ITS_Graph_2026.png' width='49%' />
-  <img src='https://github.com/prestonmorg/Covid-STAAR/blob/main/docs/images/Biology_ITS_Graph_2026.png' width='49%' />
+  <img src='docs/images/Algebra_ITS_Graph_2026' width='49%' />
+  <img src='docs/images/Biology_ITS_Graph_2026' width='49%' />
 </p>
 <p float='left'>
-  <img src='https://github.com/prestonmorg/Covid-STAAR/blob/main/docs/images/English_I_ITS_Graph_2026.png' width='49%' />
-  <img src='https://github.com/prestonmorg/Covid-STAAR/blob/main/docs/images/English_II_ITS_Graph_2026.png' width='49%' />
+  <img src='docs/images/English_I_ITS_Graph_2026' width='49%' />
+  <img src='docs/images/English_II_ITS_Graph_2026' width='49%' />
 </p>
-<div align='center>
-  <img src='https://github.com/prestonmorg/Covid-STAAR/blob/main/docs/images/English_I_ITS_Graph_2026.png' width='49%' />
+<div align='center'>
+  <img src='docs/images/Algebra_ITS_Graph_2026' width='49%' />
 </div>
 
 > While passing rates are turning upwards since the occurrence of the COVID-19 pandemic, student performance is still trailing behind where our pre-2020 trends project them to be.
