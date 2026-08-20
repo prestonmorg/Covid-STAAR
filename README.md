@@ -95,7 +95,7 @@ The plot below shows the actual passing rates alongside a counterfactual project
   <img src='docs/images/English_II_ITS_Graph_2026.png' width='49%' />
 </p>
 <div align='center'>
-  <img src='docs/images/Algebra_ITS_Graph_2026.png' width='49%' />
+  <img src='docs/images/US_History_ITS_Graph_2026.png' width='49%' />
 </div>
 
 > While passing rates are turning upwards since the occurrence of the COVID-19 pandemic, student performance is still trailing behind where our pre-2020 trends project them to be.
