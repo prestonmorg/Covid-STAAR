@@ -135,7 +135,6 @@ The next table outlines the parameter values for each STAAR subject.
 
 </div>
 
-**There are 2 Key Takeaways:**
 Since log-odds aren't as intuitive to understand, we'll look at the odds ratios (i.e. $e^{\beta}$).
 * **Immediate Pandemic Change:** Exponentiating $\beta_2$ $(e^{\beta_2})$ tells us that the odds of a student passing in 2021 fell or increased by directly following the pandemic.
 * **Post-COVID Recovery:** Exponentiating $\beta_1 + \beta_3$ $(e^{(\beta_1 + \beta_3)})$ tells us how the passing odds since have changed year by year since COVID. Note that $\beta_1$ is our pre-COVID rate, and $\beta_3$ is the rate at which our pre-COVID rate is changing. That's why we need to include both to explain our overall post-COVID recovery.
@@ -155,26 +154,25 @@ The table below shows the 2 key takeaways described above.
 
 ### 3. Key Conclusions
 
-* **A Gap Remains Despite Post-COVID Recovery:** Our post-COVID trend, $\beta_3$, shows that there is an improvement in the passing rates of students since the pandemic, but the size of our initial deficit, $\beta_2$, means our scores have yet to reach our pre-COVID predictions. It's important to note that while our recent scores have not yet met up with our pre-COVID projections, they are starting to near our pre-COVID scores.
-* **Relevance:** Since Algebra I is such an intrinsic introduction to higher level mathematics for high schoolers, tracking the recovery slope post-COVID is important for locating where academic support is still needed.
+* **Immediate Pandemic Change is Subject Dependent:** We can see from the results above that the English subjects were the only two to have an increase in percentage immediately post-COVID, while the remaining subjects decreased in percentage. There doesn't seem to be an apparent reason why this is happening.
+* **Post-COVID Recovery is Positive All Around:** Even though there is a split in which subjects increased or decreased immediately following the pandemic, all subjects seem to have a positive recovery rate that is steeper that the pre-COVID passing rate change. 
 
 ## Future Projects
 
-There are a couple of different ways in which we can expand upon this project.
+There's one piece of upkeep that can be done with this project, and a side-project relating to COVID that are related to this current project.
 
-* **Updating the Algebra I Scores:**
-
-Since the STAAR test is an ongoing measure of curriculum proficiency in the state of Texas, scores will continue to be released each year. We could include the new Spring Administration for each year and see how the post-COVID recovery is going once we consider the new scores. I do plan on updating this project each year that new scores are released, but STAAR is also being updated for the 2026-2027 academic year so I need to dive deeper into that beforehand.
-* **Running Analyses on Different Subjects:**
-
-Another idea we could expand upon in relation to this project is doing this analysis for each subject tested by STAAR, and even doing an entire collective project over how STAAR scores have been affected by all tested subjects.
-
+* **Updating STAAR Scores**
+The first thing I plan on doing as time goes by is updating the scores as they come out at the end of each year. One thing I will need to keep in mind is that the state of Texas is changing the STAAR test and moving towards other benchmark tests to measure student performance [^1].
+* **Exploring the Relationship Between Income and Post-COVID Scores**
+One other project I'd like to identify is how the change in school performance between pre-COVID and post-COVID might be related to the income of the district/surrounding neighborhoods. I'd most likely do a general pre-COVID to post-COVID change as opposed to a specific subject analysis, as I would be more curious about the overall degree of change.
 
 ## Acknowledgements and References
 
 I'd like to thank Giancarlo Villatoro for their support and guidance over planning and editing this project.
 
 Header Photo by [Susan Q Yin](https://unsplash.com/@syinq?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/books-on-brown-wooden-shelf-2JIvboGLeho?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText")
+
+[^1]: Berkley, Robin. (2025). [*What Parents Should Know About Texas' STAAR Test Replacement*](https://www.bushcenter.org/publications/what-parents-should-know-about-texas-staar-replacement)  
       
 
 ## License
